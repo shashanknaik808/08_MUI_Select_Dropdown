@@ -17,7 +17,8 @@ function Test() {
         name: "",
         email: "",
         password: "",
-        subscribe: false
+        hooman: false,
+        age: 0
     });
 
     function handleChange(e) {
@@ -54,7 +55,7 @@ function Test() {
                                 onChange={() =>
                                     setInputs((prev) => ({
                                         ...prev,
-                                        subscribe: !inputs.subscribe,
+                                        hooman: !inputs.hooman,
                                     }))
                                 }
                             />
@@ -62,11 +63,9 @@ function Test() {
                 </FormGroup>
 
                 <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <InputLabel>Age</InputLabel>
                     <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={age}
+                        value={inputs.age}
                         label="Age"
                         onChange={handleChange}
                     >
